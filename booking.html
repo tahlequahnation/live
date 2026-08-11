@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>River Guide Adventures | Booking</title>
+    <meta name="description" content="Reserve your fishing tour on the Arkansas, Verdigris, or Neosho Rivers." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="nav container">
+        <a class="brand" href="index.html">River Guide Adventures</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="booking.html">Book</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container section">
+      <section class="booking-layout">
+        <div>
+          <?php if (isset($_GET['submitted'])): ?>
+            <div class="booking-info" style="margin-bottom: 1rem;">
+              <strong>Thanks for your request!</strong> We will review your booking details and contact you shortly.
+            </div>
+          <?php endif; ?>
+          <p class="eyebrow">Reserve Your Adventure</p>
+          <h1>Reserve a river outing that feels like a cherished tradition.</h1>
+          <p>
+            Choose your river, select a date, and reserve your spot for a guided morning or evening trip. Trips depart at 7:00 AM for morning excursions and 9:00 PM for night trips, with the kind of warm, easygoing hospitality that makes the day feel special.
+          </p>
+          <div class="booking-info">
+            <p><strong>Price:</strong> $169 per person</p>
+            <p><strong>Group size:</strong> Up to 8 people per trip</p>
+            <p><strong>Phone:</strong> 931-314-9234</p>
+          </div>
+        </div>
+
+        <form class="booking-form" action="booking.php" method="post">
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+
+          <label>
+            Phone number
+            <input type="tel" name="phone" placeholder="931-314-9234" required />
+          </label>
+
+          <label>
+            River
+            <select name="river" required>
+              <option value="">Choose a river</option>
+              <option>Arkansas River</option>
+              <option>Verdigris River</option>
+              <option>Neosho River</option>
+            </select>
+          </label>
+
+          <label>
+            Trip date
+            <input type="date" name="tripDate" required />
+          </label>
+
+          <label>
+            Trip time
+            <select name="tripTime" required>
+              <option value="">Choose a time</option>
+              <option>7:00 AM Morning Trip</option>
+              <option>9:00 PM Night Trip</option>
+            </select>
+          </label>
+
+          <label>
+            Group size
+            <input type="number" name="group" min="1" max="8" placeholder="2" required />
+          </label>
+
+          <label>
+            Cardholder name
+            <input type="text" name="cardName" placeholder="Name on card" />
+          </label>
+
+          <label>
+            Card number
+            <input type="text" inputmode="numeric" name="cardNumber" placeholder="4242 4242 4242 4242" />
+          </label>
+
+          <div class="card-row">
+            <label>
+              Expiration
+              <input type="text" name="cardExp" placeholder="MM/YY" />
+            </label>
+            <label>
+              CVV
+              <input type="text" name="cardCvv" placeholder="123" />
+            </label>
+          </div>
+
+          <label>
+            Notes
+            <textarea name="details" rows="4" placeholder="Tell us about your trip, preferred date, or questions..."></textarea>
+          </label>
+
+          <button class="button primary" type="submit">Reserve My Spot</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 River Guide Adventures. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
