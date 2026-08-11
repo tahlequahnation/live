@@ -21,11 +21,6 @@
     <main class="container section">
       <section class="booking-layout">
         <div>
-          <?php if (isset($_GET['submitted'])): ?>
-            <div class="booking-info" style="margin-bottom: 1rem;">
-              <strong>Thanks for your request!</strong> We will review your booking details and contact you shortly.
-            </div>
-          <?php endif; ?>
           <p class="eyebrow">Reserve Your Adventure</p>
           <h1>Reserve a river outing that feels like a cherished tradition.</h1>
           <p>
@@ -38,7 +33,11 @@
           </div>
         </div>
 
-        <form class="booking-form" action="booking.php" method="post">
+        <form class="booking-form" action="https://formspree.io/f/mrpzqdlg" method="POST">
+          <input type="hidden" name="_subject" value="New fishing trip booking request" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_redirect" value="https://muskogee.tours/booking.html?submitted=1" />
+
           <label>
             Full name
             <input type="text" name="name" placeholder="Your name" required />
