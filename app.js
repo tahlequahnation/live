@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       catfish: {
         title: 'Catfish Catch, Cook, Clean',
-        subtitle: 'Capt. Bradley • 6 hour excursion • $489 • Up to 4 people'
+        subtitle: 'Capt. Steve • 6 hour excursion • $489 • Up to 4 people'
       }
     };
 
