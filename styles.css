@@ -350,7 +350,8 @@ textarea {
 }
 
 .striper-hero {
-  background-image: url("https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=1400&q=80");
+  background-image: linear-gradient(180deg, rgba(2, 14, 20, 0.18), rgba(2, 14, 20, 0.72)),
+    url("https://images.unsplash.com/featured/?striper,bass,fish,underwater,bait&auto=format&fit=crop&w=1400&q=80");
 }
 
 .trip-content {
