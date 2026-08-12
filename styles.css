@@ -154,10 +154,10 @@ h1, h2, h3 {
   margin-top: 1rem;
 }
 
-.card-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
+.booking-note {
+  margin: 0.25rem 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 label {
