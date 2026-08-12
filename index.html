@@ -3,57 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>River Guide Adventures | Fishing Tours</title>
-    <meta name="description" content="Book a full-day fishing excursion on the Arkansas, Verdigris, or Neosho Rivers with a guide, gear, and a catch-and-cook experience." />
+    <title>Muskogee.Fishing.Tours | Choose Your Adventure</title>
+    <meta name="description" content="Choose your river adventure with Muskogee Fishing Tours. Book a catfish or striper excursion with secure online checkout." />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header class="hero">
+  <body class="home-body">
+    <header class="topbar">
       <nav class="nav container">
-        <a class="brand" href="index.html">River Guide Adventures</a>
+        <a class="brand" href="index.html" aria-label="Muskogee Fishing Tours home">
+          <span class="brand-main">Muskogee</span>
+          <span class="brand-dot">.</span>
+          <span class="brand-accent">Fishing</span>
+          <span class="brand-dot">.</span>
+          <span class="brand-main">Tours</span>
+        </a>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="booking.html">Book</a>
         </div>
       </nav>
-
-      <div class="container hero-content">
-        <div>
-          <p class="eyebrow">Guided Fishing Trips • River Excursions • Catch & Cook</p>
-          <h1>Set out for a river day filled with stories, smiles, and good fishing.</h1>
-          <p class="hero-text">
-            Join us for a memorable adventure on the Arkansas, Verdigris, or Neosho Rivers. With a seasoned guide, a laid-back pace, and a chance to clean and cook your catch right on the water, it feels like a classic river outing made just for you.
-          </p>
-          <a class="button primary" href="booking.html">Book Now</a>
-        </div>
-      </div>
     </header>
 
-    <main class="container section">
-      <section class="photo-strip" aria-label="Fishing trip highlights">
-        <div class="photo photo-one"></div>
-        <div class="photo photo-two"></div>
-        <div class="photo photo-three"></div>
+    <main class="split-page">
+      <section class="adventure-panel catfish-panel">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <p class="panel-kicker">Catfish Adventure</p>
+          <h1>Catfish Catch, Cook, Clean</h1>
+          <p>Guided by Capt. Bradley • 6 hour excursion • $489 • Up to 4 people</p>
+          <a class="button primary" href="booking.html?trip=catfish">Book Now</a>
+        </div>
       </section>
 
-      <section class="card-grid">
-        <article class="card">
-          <h2>Guided Excursions</h2>
-          <p>From quiet morning casts to glowing evening trips, our guide makes each outing feel welcoming, relaxed, and full of local river know-how.</p>
-        </article>
-        <article class="card">
-          <h2>Catch & Cook</h2>
-          <p>There is something special about turning your catch into a meal right by the water. We can clean and cook it on the excursion for a true riverside feast.</p>
-        </article>
-        <article class="card">
-          <h2>Book Your Day</h2>
-          <p>Choose your river, your date, and your crew. We will help make your getaway feel easy, memorable, and worth coming back for.</p>
-        </article>
+      <section class="adventure-panel striper-panel">
+        <div class="panel-overlay"></div>
+        <div class="panel-content">
+          <p class="panel-kicker">Striper Adventure</p>
+          <h1>Striper Catch, Clean, Cook</h1>
+          <p>Guided by Capt. Wayne • 6 hour excursion • $489 • Up to 4 people</p>
+          <a class="button primary" href="booking.html?trip=striper">Book Now</a>
+        </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>© 2026 River Guide Adventures. All rights reserved.</p>
-    </footer>
+    <div class="choice-bar container">
+      <p>Choose Your Adventure</p>
+    </div>
   </body>
 </html>

@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>River Guide Adventures | Booking</title>
-    <meta name="description" content="Reserve your fishing tour on the Arkansas, Verdigris, or Neosho Rivers." />
+    <title>Muskogee.Fishing.Tours | Booking</title>
+    <meta name="description" content="Reserve your catfish or striper excursion with Muskogee Fishing Tours." />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="booking-body">
     <header class="page-header">
       <nav class="nav container">
-        <a class="brand" href="index.html">River Guide Adventures</a>
+        <a class="brand" href="index.html" aria-label="Muskogee Fishing Tours home">
+          <span class="brand-main">Muskogee</span>
+          <span class="brand-dot">.</span>
+          <span class="brand-accent">Fishing</span>
+          <span class="brand-dot">.</span>
+          <span class="brand-main">Tours</span>
+        </a>
         <div class="nav-links">
           <a href="index.html">Home</a>
           <a href="booking.html">Book</a>
@@ -18,23 +24,25 @@
       </nav>
     </header>
 
-    <main class="container section">
+    <main class="container booking-main">
       <section class="booking-layout">
-        <div>
+        <div class="booking-copy">
           <p class="eyebrow">Reserve Your Adventure</p>
-          <h1>Reserve a river outing that feels like a cherished tradition.</h1>
+          <h1>Choose your river outing.</h1>
           <p>
-            Choose your river, select a date, and reserve your spot for a guided morning or evening trip. Trips depart at 7:00 AM for morning excursions and 9:00 PM for night trips, with the kind of warm, easygoing hospitality that makes the day feel special.
+            Book a guided 6 hour excursion with Capt. Wayne or Capt. Bradley. Each charter is built for up to 4 guests and includes a catch, clean, cook experience on the river.
           </p>
+
           <div class="booking-info">
-            <p><strong>Price:</strong> $169 per person</p>
-            <p><strong>Group size:</strong> Up to 8 people per trip</p>
-            <p><strong>Phone:</strong> 931-314-9234</p>
+            <p><strong>Striper trip:</strong> Catch, clean, cook with Capt. Wayne</p>
+            <p><strong>Catfish trip:</strong> Catch, cook, clean with Capt. Bradley</p>
+            <p><strong>Price:</strong> $489 per trip</p>
+            <p><strong>Capacity:</strong> Up to 4 people</p>
           </div>
         </div>
 
         <form class="booking-form" action="https://formspree.io/f/mrpzqdlg" method="POST">
-          <input type="hidden" name="_subject" value="New fishing trip booking request" />
+          <input type="hidden" name="_subject" value="New Muskogee Fishing Tours booking request" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_redirect" value="https://muskogee.tours/booking.html?submitted=1" />
 
@@ -50,7 +58,16 @@
 
           <label>
             Phone number
-            <input type="tel" name="phone" placeholder="931-314-9234" required />
+            <input type="tel" name="phone" placeholder="Your phone number" required />
+          </label>
+
+          <label>
+            Excursion option
+            <select name="trip" required>
+              <option value="">Choose an excursion</option>
+              <option value="Striper Catch, Clean, Cook with Capt. Wayne">Striper Catch, Clean, Cook with Capt. Wayne</option>
+              <option value="Catfish Catch, Cook, Clean with Capt. Bradley">Catfish Catch, Cook, Clean with Capt. Bradley</option>
+            </select>
           </label>
 
           <label>
@@ -78,8 +95,8 @@
           </label>
 
           <label>
-            Group size
-            <input type="number" name="group" min="1" max="8" placeholder="2" required />
+            Party size
+            <input type="number" name="group" min="1" max="4" placeholder="2" required />
           </label>
 
           <label>
@@ -97,8 +114,16 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <p>© 2026 River Guide Adventures. All rights reserved.</p>
-    </footer>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const tripValue = params.get('trip');
+      const select = document.querySelector('select[name="trip"]');
+      if (select && tripValue === 'catfish') {
+        select.value = 'Catfish Catch, Cook, Clean with Capt. Bradley';
+      }
+      if (select && tripValue === 'striper') {
+        select.value = 'Striper Catch, Clean, Cook with Capt. Wayne';
+      }
+    </script>
   </body>
 </html>
